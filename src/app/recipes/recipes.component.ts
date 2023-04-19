@@ -7,5 +7,9 @@ import { Recipe } from './recipes.model';
   styleUrls: ['recipes.component.css'],
 })
 export class RecipesComponent {
-  recipes!: Recipe;
+  newRecipe!: Recipe;
+  recipes(recipe: Recipe) {
+    this.newRecipe = recipe;
+    console.log(this.newRecipe);
+  }
 }
