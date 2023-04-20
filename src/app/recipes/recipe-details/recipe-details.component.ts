@@ -9,7 +9,5 @@ import { Recipe } from '../recipes.model';
 export class RecipeDetailsComponent {
   @Input() recipe!: Recipe;
 
-  constructor() {
-    console.log(this.recipe);
-  }
+  constructor() {}
 }

@@ -14,17 +14,10 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   styleUrls: ['shopping-list-edit.component.html'],
 })
 export class ShoppingListEditComponent {
-  // newIngredient: Ingredient = {
-  //   name: this.inputName,
-  //   amount: this.inputAmount,
-  // };
-
-  inputName: any;
-  inputAmount: any;
+  @Output() eventIngredient = new EventEmitter<Ingredient>();
+  newIngredient!: Ingredient;
   addIngred(name: any, amount: any) {
-    this.inputName = name.value;
-    this.inputAmount = amount.value;
-    console.log(this.inputName);
-    console.log(this.inputAmount);
+    this.newIngredient = new Ingredient(name.value, amount.value);
+    this.eventIngredient.emit(this.newIngredient);
   }
 }

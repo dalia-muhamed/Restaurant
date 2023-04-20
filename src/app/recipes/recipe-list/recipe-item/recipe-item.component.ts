@@ -7,9 +7,10 @@ import { Recipe } from '../../recipes.model';
   styleUrls: ['recipe-item.component.css'],
 })
 export class RecipeItemComponent {
-  @Output() onSelectedItem = new EventEmitter<Recipe>();
+  @Output() onSelectedItem = new EventEmitter<void>();
   @Input() recipe!: Recipe;
+
   selectedRecipeItem() {
-    this.onSelectedItem.emit(this.recipe);
+    this.onSelectedItem.emit();
   }
 }

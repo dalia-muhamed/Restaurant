@@ -9,6 +9,7 @@ import { Recipe } from '../recipes.model';
 export class RecipeListComponent {
   @Output() recipeItem = new EventEmitter<Recipe>();
   selectedRecipeItem(recipe: Recipe) {
+    console.log(recipe);
     this.recipeItem.emit(recipe);
   }
   recipes: Recipe[] = [
