@@ -11,6 +11,8 @@ export class RecipeItemComponent {
   @Input() recipe!: Recipe;
 
   selectedRecipeItem() {
+    console.log(this.recipe);
+
     this.onSelectedItem.emit();
   }
 }
