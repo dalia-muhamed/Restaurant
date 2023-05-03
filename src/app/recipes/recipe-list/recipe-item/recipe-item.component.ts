@@ -7,12 +7,12 @@ import { Recipe } from '../../recipes.model';
   styleUrls: ['recipe-item.component.css'],
 })
 export class RecipeItemComponent {
-  @Output() onSelectedItem = new EventEmitter<void>();
-  @Input() recipe!: Recipe;
+  @Output() onSelectedItem = new EventEmitter<Recipe>();
+  @Input() recipes!: Recipe[];
 
-  selectedRecipeItem() {
-    console.log(this.recipe);
+  selectedRecipeItem(recipe: Recipe) {
+    console.log(this.recipes);
 
-    this.onSelectedItem.emit();
+    this.onSelectedItem.emit(recipe);
   }
 }

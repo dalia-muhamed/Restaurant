@@ -1,14 +1,20 @@
-<a href="#" class="list-group-item clearfix" (click)="selectedRecipeItem()">
-  <div class="pull-left">
-    <h4 class="list-group-heading">{{ recipe.name }}</h4>
-    <p class="list-group-item-text">{{ recipe.description }}</p>
-  </div>
-  <span class="pull-right">
-    <img
-      [src]="recipe.imgPath"
-      alt="{{ recipe.name }}"
-      class="img-responsive"
-      style="max-height: 50px"
-    />
-  </span>
-</a>
+<div *ngFor="let recipeEl of recipes">
+  <a
+    href="#"
+    class="list-group-item clearfix"
+    (click)="selectedRecipeItem(recipeEl)"
+  >
+    <div class="pull-left">
+      <h4 class="list-group-heading">{{ recipeEl.name }}</h4>
+      <p class="list-group-item-text">{{ recipeEl.description }}</p>
+    </div>
+    <span class="pull-right">
+      <img
+        [src]="recipeEl.imgPath"
+        alt="{{ recipeEl.name }}"
+        class="img-responsive"
+        style="max-height: 50px"
+      />
+    </span>
+  </a>
+</div>
