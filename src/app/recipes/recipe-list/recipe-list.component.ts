@@ -9,13 +9,8 @@ import { RecipeService } from '../recipe.service';
 })
 export class RecipeListComponent implements OnInit {
   recipes!: Recipe[];
-  @Output() recipeItem = new EventEmitter<Recipe>();
   constructor(private recipeService: RecipeService) {}
   ngOnInit() {
     this.recipes = this.recipeService.getRecipes();
-  }
-  selectedRecipeItem(recipe: Recipe) {
-    console.log(recipe);
-    this.recipeItem.emit(recipe);
   }
 }
