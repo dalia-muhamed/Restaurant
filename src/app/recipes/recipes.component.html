@@ -1,9 +1,12 @@
 <div class="row">
   <div class="col-md-5">
-    <recipe-list (recipeItem)="recipes = $event"></recipe-list>
+    <recipe-list (recipeItem)="recipesFun($event)"></recipe-list>
   </div>
   <div class="col-md-7">
-    <recipe-details *ngIf="recipes" [recipe]="recipes"></recipe-details>
+    <recipe-details
+      *ngIf="recipes; else ifNoDetails"
+      [recipe]="recipes"
+    ></recipe-details>
     <ng-template #ifNoDetails
       ><p>You haven't selected a recipe yet!</p></ng-template
     >

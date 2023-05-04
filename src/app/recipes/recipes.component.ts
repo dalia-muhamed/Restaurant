@@ -8,8 +8,8 @@ import { Recipe } from './recipes.model';
 })
 export class RecipesComponent {
   recipes!: Recipe;
-  // recipes(recipe: Recipe) {
-  //   this.newRecipe = recipe;
-  //   console.log(this.newRecipe);
-  // }
+  recipesFun(recipe: Recipe) {
+    this.recipes = recipe;
+    console.log(this.recipes);
+  }
 }
