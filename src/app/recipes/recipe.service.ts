@@ -1,7 +1,7 @@
 import { Recipe } from './recipes.model';
 
 export class RecipeService {
-  recipes: Recipe[] = [
+  private recipes: Recipe[] = [
     new Recipe(
       'kosa',
       'kosa desc',
@@ -13,4 +13,7 @@ export class RecipeService {
       'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/leek-pea-watercress-soup-7733968.jpg'
     ),
   ];
+  getRecipes() {
+    return this.recipes.slice();
+  }
 }

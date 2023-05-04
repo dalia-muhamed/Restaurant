@@ -11,7 +11,6 @@ import { RecipeService } from './recipe.service';
 export class RecipesComponent {
   recipes!: Recipe;
   recipesFun(recipe: Recipe) {
-    console.log('recipe' + recipe);
     this.recipes = recipe;
     console.log('recipes' + this.recipes);
   }
