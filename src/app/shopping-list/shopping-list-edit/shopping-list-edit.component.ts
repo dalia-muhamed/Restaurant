@@ -19,6 +19,6 @@ export class ShoppingListEditComponent {
   constructor(private shoppingListService: ShoppingListService) {}
   onAddItem(name: any, amount: any) {
     this.newIngredient = new Ingredient(name, amount);
-    this.shoppingListService.newIngredient(this.newIngredient);
+    this.shoppingListService.addIngredient(this.newIngredient);
   }
 }
