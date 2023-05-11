@@ -10,7 +10,10 @@ import { RecipeService } from '../recipe.service';
 })
 export class RecipeDetailsComponent {
   @Input() recipe!: Recipe;
-  constructor(private recipeService: RecipeService) {}
+  constructor(
+    private recipeService: RecipeService,
+    private slService: ShoppingListService
+  ) {}
   onAddToShoppingList() {
     this.recipeService.addIngredientToShopping(this.recipe.ingredients);
     console.log(this.recipe.ingredients);
