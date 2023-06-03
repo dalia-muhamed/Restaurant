@@ -3,12 +3,11 @@
     <recipe-list></recipe-list>
   </div>
   <div class="col-md-7">
-    <recipe-details
-      *ngIf="selectedRecipe; else ifNoDetails"
+    <router-outlet></router-outlet>
+    <!-- <recipe-details
+      *ngIf="selectedRecipe"
       [recipe]="selectedRecipe"
     ></recipe-details>
-    <ng-template #ifNoDetails
-      ><p>You haven't selected a recipe yet!</p></ng-template
-    >
+    <default-page></default-page> -->
   </div>
 </div>
