@@ -4,6 +4,7 @@
     <hr />
     <ul class="list-group">
       <a
+        (click)="onEdit(ingredient.name, ingredient.amount)"
         style="cursor: pointer"
         class="list-group-item"
         *ngFor="let ingredient of ingredients"
